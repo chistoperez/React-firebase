@@ -9,13 +9,13 @@ const formValidate = (getValues) => {
     minLength: { value: 6, message: "Password minimum 6 characters" },
     validateTrim: {
       trim: (v) => {
-        if (!v.trim()) return "No spaces";
+        if (!v.trim()) return "Empty password";
         return true;
       },
     },
-    validateEquals(getValues) {
+    validateEquals(value) {
       return {
-        equals: (v) => v === getValues("password") || "Passwords don't match",
+        equals: (v) => v === value || "Passwords don't match",
       };
     },
   };
