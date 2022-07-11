@@ -13,11 +13,11 @@ const Login = () => {
   const { loginUser } = useContext(UserContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-
     setError,
   } = useForm({
     defaultValues: {
