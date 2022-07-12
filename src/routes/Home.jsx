@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import FormError from "../components/FormError";
@@ -58,7 +57,7 @@ const Home = () => {
     await deleteData(nanoid);
   };
 
-  const handleClickEdit = async (nanoid) => {
+  const handleClickEdit = async (item) => {
     setValue("url", item.origin);
     setNewOriginID(item.nanoid);
   };
